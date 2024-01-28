@@ -35,15 +35,15 @@ function Navbar(props) {
                                 </label>
                             </div>
                             <div className="form-check me-3 ">
-                                <input onClick={props.clickColor} value="#27374D" className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                                <input onChange={props.clickColor} value="#27374D" className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
                                 <label className="form-check-label" htmlFor="flexRadioDefault2">
                                     2
                                 </label>
                             </div>
-
+{/* 
                             <label htmlFor="exampleColorInput" className="form-label me-2 mt-2">Change BG color</label>
                             <input onClick={props.colorChange} type="color" className="me-5  form-control form-control-color colorPalete" id="exampleColorInput" title="Choose your color"></input>
-
+ */}
 
 
                             <div className="form-check form-switch">
@@ -69,7 +69,7 @@ Navbar.propTypes = {
     title: PropTypes.string.isRequired,
     about: PropTypes.string.isRequired,
     toggleMode: PropTypes.func,
-    colorChange: PropTypes.func,
+    // colorChange: PropTypes.func,
     clickColor: PropTypes.func,
     mode: PropTypes.func,
 }

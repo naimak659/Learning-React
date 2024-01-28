@@ -30,7 +30,7 @@ function TextArea(props) {
       </div>
       <button className='btn btn-primary ' onClick={toUpperCase}>Convert To UPPERCASE</button>
       <button className='btn btn-primary ms-3 ' onClick={toLowwerCase}>Convert To lowercase</button>
-      <p>{text.split(" ").length} word and {text.length} character.</p>
+      <p>{text.split(" ").filter((ele)=> {return ele.length!==0}).length} word and {text.length} character.</p>
       <p>It will take {.008 * text.split(" ").length} minutes to read.</p>
       <h3 className='text-info '>Preview</h3>
       <div className="card">
@@ -47,7 +47,7 @@ function TextArea(props) {
   )
 }
 TextArea.propTypes = {
-  heading: PropTypes.string.isRequired
+  heading: PropTypes.string.isRequired,
 }
 
 export default TextArea;

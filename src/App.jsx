@@ -20,10 +20,12 @@ function App() {
     }, 2000);
   }
 
-  const colorChange = (e) => {
-    setColor(e.target.value);
-    document.body.style.background = color;
-  }
+  // const colorChange = (e) => {
+  //   setColor(e.target.value);
+  //   document.body.style.background = color;
+  // }
+
+
   const clickColor = (e) => {
     setColor(e.target.value);
     document.body.style.background = color;
@@ -44,12 +46,12 @@ function App() {
       document.body.style.background = '#F5EEE6';
       showAlert("Light mode has been enabled", "success")
     }
-  }; 
+  };
 
-
+// colorChange={colorChange}
   return (
     <>
-      <Navbar clickColor={clickColor}  colorChange={colorChange} title="TextUtils" about="About Us" mode={mode} toggleMode={toggleMode} />
+      <Navbar clickColor={clickColor}  title="TextUtils" about="About Us" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <TextArea showAlert={showAlert} heading="Write/Paste here" mode={mode} />
 
